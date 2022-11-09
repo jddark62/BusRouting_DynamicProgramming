@@ -1,5 +1,14 @@
-file1 = open("memoization.txt", "w")
 
+file1 = open("memoization.txt", "w") 
+
+"""
+busRoute function takes 3 arguments:
+i = starting node
+s = set of nodes
+graph = adjacency matrix
+
+busRoute function returns minimum cost of the route
+"""
 def busRoute(i, s, graph):
     h = i
 
@@ -12,6 +21,7 @@ def busRoute(i, s, graph):
         f = i * -2
     i = f
     
+
     if s == []:
         a = graph[i][len(graph)-1]
         return a
